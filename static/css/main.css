@@ -57,6 +57,15 @@
   scroll-behavior: smooth;
 }
 
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  will-change: transform;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -147,7 +156,7 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -157,7 +166,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  width: 25%;
+  max-height: 320px;
   margin-right: 8px;
 }
 
@@ -677,17 +687,19 @@ section,
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  
 }
 
 .hero .carousel-container {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
   position: relative;
-  min-height: 75vh;
-  padding-top: 60px;
+  min-height: 85vh;
+  padding-top: 40px;
 }
 
 .hero h2 {
@@ -880,7 +892,7 @@ section,
   background-color: var(--surface-color);
   color: var(--heading-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  padding: 15px 20px;
+  padding: 10px 20px;
   transition: 0.3s;
   border-radius: 0;
   display: flex;
@@ -2558,3 +2570,5 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+

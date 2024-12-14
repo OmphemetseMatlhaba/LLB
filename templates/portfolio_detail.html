@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+  
+  
+  
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <section 
+    class="hero position-relative text-center d-flex flex-column justify-content-center align-items-center" 
+    style="background-image: url('https://i.ibb.co/M2QnhqV/Love-Kitchen.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 40vh;">
+    
+    <!-- Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+    
+    <div class="hero_text_container mb-4 position-relative">
+      <ul class="list-unstyled hero_text">
+        <li>
+          <span class="fs-3 fw-bold text-white"> <h1>{{ item.title }}</h1></span>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="hero-main position-relative">
+      <!-- Placeholder for additional content -->
+    </div>
+  </section>
+  
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Portfolio Image -->
+                <img src="{{ item.image.url }}" class="img-fluid" alt="{{ item.title }}">
+            </div>
+            <div class="col-md-6">
+                <!-- Portfolio Details -->
+                <h1>{{ item.title }}</h1>
+                <p>{{ item.description }}</p>
+                <ul>
+                    <li><strong>Category:</strong> {{ item.category }}</li>
+                    <li><strong>Date:</strong> {{ item.date }}</li>
+                </ul>
+                <a href="{% url 'index' %}" class="btn btn-primary">Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+{% endblock %}

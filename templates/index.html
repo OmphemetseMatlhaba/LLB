@@ -5,69 +5,81 @@
 
   
     <main class="main">
-  
-      <!-- Hero Section -->
-      <section id="hero" class="hero section dark-background">
-  
-        <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
-  
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <div class="carousel-container" >
-              <h2 class="animate__animated animate__fadeInDown">LOVE.LIVE <span>BELIEVE</span></h2>
-              <p class="animate__animated animate__fadeInUp">For this, they hope that their desires, hopes and dreams for the youth
-                will inevitably come to pass…with the help of the community and other stakeholders
-                who Live to Love and Believe in a better tomorrow.</p>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Donate Now</a>
-            </div>
-          </div>
-  
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="carousel-container">
-              <h2 class="animate__animated animate__fadeInDown">Live.Love.Believe</h2>
-              <p class="animate__animated animate__fadeInUp">Together we can make
-              a Difference</p>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Donate Now</a>
-            </div>
-          </div>
-  
-          <!-- Slide 3 -->
-          <div class="carousel-item">
-            <div class="carousel-container">
-              <h2 class="animate__animated animate__fadeInDown">Live.Love.Believe</h2>
-              <p class="animate__animated animate__fadeInUp"> We are dedicated to the protection of the environment, taking cognisance of the correlation that exists between the environment,
-                energy, education and health issues, these factors tend to be the drivers of environmental degradation.</p>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Donate Now</a>
-            </div>
-          </div>
-  
-          <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-          </a>
-  
-          <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-          </a>
-  
-        </div>
-  
-        <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-          <defs>
-            <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-          </defs>
-          <g class="wave1">
-            <use xlink:href="#wave-path" x="50" y="3"></use>
-          </g>
-          <g class="wave2">
-            <use xlink:href="#wave-path" x="50" y="0"></use>
-          </g>
-          <g class="wave3">
-            <use xlink:href="#wave-path" x="50" y="9"></use>
-          </g>
-        </svg>
-  
-      </section><!-- /Hero Section -->
+  <!-- Hero Section -->
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+  <div id="hero-carousel" class="container-fluid carousel carousel-fade" data-bs-ride="carousel">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active position-relative" style="background-image: url('https://i.ibb.co/M2QnhqV/Love-Kitchen.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Overlay -->
+      <div class="overlay position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+      <!-- Content -->
+      <div class="carousel-container d-flex flex-column justify-content-center align-items-center text-center h-100 position-relative">
+        <h2 class="animate__animated animate__fadeInDown text-white">LOVE.LIVE <span>BELIEVE</span></h2>
+        <p class="animate__animated animate__fadeInUp text-white">
+          For this, they hope that their desires, hopes, and dreams for the youth will inevitably come to pass… 
+          with the help of the community and other stakeholders who Live to Love and Believe in a better tomorrow.
+        </p>
+        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Donate Now</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item position-relative" style="background-image: url('https://i.ibb.co/j6Jww0m/wetland.png');background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Overlay -->
+      <div class="overlay position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+      <!-- Content -->
+      <div class="carousel-container d-flex flex-column justify-content-center align-items-center text-center h-100 position-relative">
+        <h2 class="animate__animated animate__fadeInDown text-white">Live.Love.Believe</h2>
+        <p class="animate__animated animate__fadeInUp text-white">
+          Together we can make a Difference.
+        </p>
+        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Donate Now</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item position-relative" style="background-image: url('https://i.ibb.co/7k8vMNq/germany.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <!-- Overlay -->
+      <div class="overlay position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+      <!-- Content -->
+      <div class="carousel-container d-flex flex-column justify-content-center align-items-center text-center h-100 position-relative">
+        <h2 class="animate__animated animate__fadeInDown text-white">Live.Love.Believe</h2>
+        <p class="animate__animated animate__fadeInUp text-white">
+          We are dedicated to the protection of the environment, taking cognisance of the correlation that exists 
+          between the environment, energy, education, and health issues, which drive environmental degradation.
+        </p>
+        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Donate Now</a>
+      </div>
+    </div>
+
+    <!-- Carousel Navigation -->
+    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+    <defs>
+      <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+    </defs>
+    <g class="wave1">
+      <use xlink:href="#wave-path" x="50" y="3"></use>
+    </g>
+    <g class="wave2">
+      <use xlink:href="#wave-path" x="50" y="0"></use>
+    </g>
+    <g class="wave3">
+      <use xlink:href="#wave-path" x="50" y="9"></use>
+    </g>
+  </svg>
+</section>
+
   
       <!-- About Section -->
       <section id="about" class="about section">
@@ -197,9 +209,10 @@
             <img src="{{ item.image.url }}" class="img-fluid" alt="{{ item.title }}">
             <div class="portfolio-info">
               <h4>{{ item.title }}</h4>
-              <p>{{ item.description }}</p>
+               <p>{{ item.description|truncatewords:20 }}</p>
+
               <a href="{{ item.image.url }}" title="{{ item.title }}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="{% url 'portfolio_detail' item.id %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <a href="{% url 'portfolio_detail' id=item.id %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div><!-- End Portfolio Item -->
         {% endfor %}
