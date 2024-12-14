@@ -1,0 +1,406 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+  
+    <main class="main">
+  
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+  
+        <div id="hero-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+  
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="carousel-container" >
+              <h2 class="animate__animated animate__fadeInDown">LOVE.LIVE <span>BELIEVE</span></h2>
+              <p class="animate__animated animate__fadeInUp">For this, they hope that their desires, hopes and dreams for the youth
+                will inevitably come to pass…with the help of the community and other stakeholders
+                who Live to Love and Believe in a better tomorrow.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Donate Now</a>
+            </div>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="carousel-container">
+              <h2 class="animate__animated animate__fadeInDown">Live.Love.Believe</h2>
+              <p class="animate__animated animate__fadeInUp">Together we can make
+              a Difference</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Donate Now</a>
+            </div>
+          </div>
+  
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="carousel-container">
+              <h2 class="animate__animated animate__fadeInDown">Live.Love.Believe</h2>
+              <p class="animate__animated animate__fadeInUp"> We are dedicated to the protection of the environment, taking cognisance of the correlation that exists between the environment,
+                energy, education and health issues, these factors tend to be the drivers of environmental degradation.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Donate Now</a>
+            </div>
+          </div>
+  
+          <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+          </a>
+  
+          <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+          </a>
+  
+        </div>
+  
+        <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+          <defs>
+            <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+          </defs>
+          <g class="wave1">
+            <use xlink:href="#wave-path" x="50" y="3"></use>
+          </g>
+          <g class="wave2">
+            <use xlink:href="#wave-path" x="50" y="0"></use>
+          </g>
+          <g class="wave3">
+            <use xlink:href="#wave-path" x="50" y="9"></use>
+          </g>
+        </svg>
+  
+      </section><!-- /Hero Section -->
+  
+      <!-- About Section -->
+      <section id="about" class="about section">
+  
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About</h2>
+          <p>Who we are</p>
+        </div><!-- End Section Title -->
+  
+        <div class="container">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+              <p>
+                Live.Love.Believe (Love Africa) founded in 2012,
+                operates as a non-profit organisation based in Barkley West, Northeren Cape (SA).
+              </p>
+              <ul>
+                <li>As a non-profit organization, Love Africa:</li>
+                <li><i class="bi bi-check2-circle"></i> <span>Conceptualizes, promotes, and participates in projects.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>Focuses on sustainable socio-economic development, education, and digital inclusion.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>Works co-creatively to empower communities.</span></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                    We are dedicated to the sustainable development of our communities, including the protection of the environment.
+                    
+                    We recognize the connection between the environment, energy, education, and health issues. These factors often drive socio-economic and environmental degradation.</p>
+              <p>Our goal is to provide innovative, practical, and sustainable solutions to community problems. We align our efforts with the framework of the sustainable development goals. </p>
+              <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- /About Section -->
+  
+<!-- your_template.html -->
+<section id="features" class="features section">
+    <div class="container">
+        <ul class="nav nav-tabs row  d-flex" data-aos="fade-up" data-aos-delay="100">
+            {% for tab in tabs %}
+                <li class="nav-item col-3">
+                    <a class="nav-link {% if forloop.first %}active show{% endif %}" data-bs-toggle="tab" data-bs-target="#features-tab-{{ forloop.counter }}">
+                        <i class="bi bi-binoculars"></i>
+                        <h4 class="d-none d-lg-block">{{ tab.title }}</h4>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+            {% for tab in tabs %}
+                <div class="tab-pane fade {% if forloop.first %}active show{% endif %}" id="features-tab-{{ forloop.counter }}">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                            <h3>{{ tab.title }}</h3>
+                            <p>{{ tab.description }}</p>
+                            {% if tab.additional_description %}
+                                <p class="fst-italic">{{ tab.additional_description }}</p>
+                            {% endif %}
+                            <ul>
+                                <li><i class="bi bi-check2-all"></i> <span>{{ tab.description }}</span></li>
+                                <li><i class="bi bi-check2-all"></i> <span>{{ tab.title }}</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 text-center">
+                            <img src="{{ tab.image_url }}" alt="{{ tab.title }}" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+  
+      <!-- Call To Action Section -->
+      <section id="call-to-action" class="call-to-action section dark-background">
+  
+        <div class="container">
+  
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-xl-9 text-center text-xl-start">
+              <h3>Volunteer</h3>
+              <p>Together we can make a Difference</p>
+            </div>
+            <div class="col-xl-3 cta-btn-container text-center">
+              <a class="cta-btn align-middle" href="#">Call To Action</a>
+            </div>
+          </div>
+  
+        </div>
+  
+      </section><!-- /Call To Action Section -->
+  
+  
+  
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+  
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>What we've done</p>
+        </div><!-- End Section Title -->
+  
+<div class="container">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+  
+      <!-- Portfolio Filters (Can be used to filter by date) -->
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <!-- You can dynamically generate filters for dates if needed -->
+        <li data-filter=".filter-2024">2024</li>
+        <li data-filter=".filter-2023">2023</li>
+      </ul><!-- End Portfolio Filters -->
+  
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+        {% for item in portfolio_items %}
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ item.date|date:"Y" }}">
+            <img src="{{ item.image.url }}" class="img-fluid" alt="{{ item.title }}">
+            <div class="portfolio-info">
+              <h4>{{ item.title }}</h4>
+              <p>{{ item.description }}</p>
+              <a href="{{ item.image.url }}" title="{{ item.title }}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="{% url 'portfolio_detail' item.id %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div><!-- End Portfolio Item -->
+        {% endfor %}
+      </div><!-- End Portfolio Container -->
+      
+    </div>
+  </div><!-- End container -->
+  
+  
+    
+  
+     
+           
+
+  
+      <!-- Faq Section -->
+      <section id="faq" class="faq section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Frequently Asked Questions</h2>
+          <p>Frequently Asked Questions</p>
+        </div><!-- End Section Title -->
+  
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div class="col-12">
+              <div class="custom-accordion" id="accordion-faq">
+                <div class="accordion-item">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-1">
+                      How to download and register?
+                    </button>
+                  </h2>
+  
+                  <div id="collapse-faq-1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion-faq">
+                    <div class="accordion-body">
+                      Far far away, behind the word mountains, far from the countries
+                      Vokalia and Consonantia, there live the blind texts. Separated
+                      they live in Bookmarksgrove right at the coast of the Semantics,
+                      a large language ocean.
+                    </div>
+                  </div>
+                </div>
+                <!-- .accordion-item -->
+  
+                <div class="accordion-item">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-2" "="">
+                  How to create your paypal account?
+                </button>
+              </h2>
+              <div id=" collapse-faq-2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-faq">
+                      <div class="accordion-body">
+                        A small river named Duden flows by their place and supplies it
+                        with the necessary regelialia. It is a paradisematic country, in
+                        which roasted parts of sentences fly into your mouth.
+                      </div>
+                </div>
+              </div>
+              <!-- .accordion-item -->
+  
+              <div class="accordion-item">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-3">
+                    How to link your paypal and bank account?
+                  </button>
+                </h2>
+  
+                <div id="collapse-faq-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    When she reached the first hills of the Italic Mountains, she
+                    had a last view back on the skyline of her hometown
+                    Bookmarksgrove, the headline of Alphabet Village and the subline
+                    of her own road, the Line Lane. Pityful a rethoric question ran
+                    over her cheek, then she continued her way.
+                  </div>
+                </div>
+              </div>
+              <!-- .accordion-item -->
+  
+            </div>
+          </div>
+        </div>
+        </div>
+      </section><!-- /Faq Section -->
+  
+     <!-- Team Section -->
+<section id="team" class="team section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Team</h2>
+      <p>Our Hardworking Team</p>
+    </div><!-- End Section Title -->
+  
+    <div class="container">
+      <div class="row gy-4">
+        {% for member in team_members %}
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{{ member.image.url }}" class="img-fluid" alt="{{ member.name }}">
+                <div class="social">
+                  <a href="{{ member.twitter_link }}"><i class="bi bi-twitter-x"></i></a>
+                  <a href="{{ member.facebook_link }}"><i class="bi bi-facebook"></i></a>
+                  <a href="{{ member.instagram_link }}"><i class="bi bi-instagram"></i></a>
+                  <a href="{{ member.linkedin_link }}"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>{{ member.name }}</h4>
+                <span>{{ member.position }}</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+        {% endfor %}
+      </div>
+    </div>
+  </section><!-- /Team Section -->
+  
+  
+    
+  
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+  
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div><!-- End Section Title -->
+  
+        <div class="container" data-aos="fade" data-aos-delay="100">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-4">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>6 Short Street, Barkley West, 8375.</p>
+                </div>
+              </div><!-- End Info Item -->
+  
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>062 946 8189</p>
+                </div>
+              </div><!-- End Info Item -->
+  
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>info@llbafrica.org.za</p>
+                </div>
+              </div><!-- End Info Item -->
+  
+            </div>
+  
+            <div class="col-lg-8">
+              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+  
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  </div>
+  
+                  <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  </div>
+  
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  </div>
+  
+                  <div class="col-md-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  </div>
+  
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+  
+                    <button type="submit">Send Message</button>
+                  </div>
+  
+                </div>
+              </form>
+            </div><!-- End Contact Form -->
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- /Contact Section -->
+  
+    </main>
+  
+  </html>
+{% endblock %}
