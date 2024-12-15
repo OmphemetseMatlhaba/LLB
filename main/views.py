@@ -16,4 +16,5 @@ def portfolio_detail(request, id):
 
 
 
-
+def about(request):
+ return render(request, 'about.html')

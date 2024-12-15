@@ -19,7 +19,15 @@ class FeatureTab(models.Model):
 
 
 class PortfolioItem(models.Model):
+    
+    CATEGORY_CHOICES = [
+        ('botho', 'Botho'),
+        ('dikgatlong green initiative', 'Dikgatlong Green Initiative'),
+        ('dingwetsi tsa afrika', 'Dingwetsi Tsa Afrika'),
+    ]
+    
     title = models.CharField(max_length=255)
+    category = models.CharField(max_length=27, choices=CATEGORY_CHOICES)
     description = models.TextField()
     image = models.ImageField(upload_to='portfolio_images/')
     date = models.DateTimeField(auto_now_add=True)
